@@ -32,7 +32,10 @@ Resultado: Sucesso na identificação das credenciais msfadmin:msfadmin.
 Simulei um ataque contra o formulário de login da aplicação DVWA. O diferencial aqui foi configurar o sinal de erro para que a ferramenta soubesse diferenciar um login falho de um sucesso.
 
 Comando: medusa -h 192.168.56.105 -u admin -P senhas.txt -M web-form -m FORM:"dvwa/login.php" -m DENY-SIGNAL:"Login failed"
+Nota Técnica: Troubleshooting no Módulo Web-Form
+"Durante os testes no DVWA, foram identificados comportamentos de Falso Positivo e Falso Negativo. Isso ocorre devido à natureza volátil das respostas HTTP e à gestão de sessões (cookies) da aplicação alvo, que nem sempre retorna a string exata configurada no DENY-SIGNAL.
 
+Resultado da Auditoria: Embora a ferramenta tenha reportado sucessos indevidos em certas configurações, a validação manual e o refinamento dos parâmetros permitiram concluir que a lista de senhas testada foi processada integralmente, demonstrando a importância do analista não confiar cegamente nos outputs automatizados."
 Evidência:
 
 4. Password Spraying em SMB
