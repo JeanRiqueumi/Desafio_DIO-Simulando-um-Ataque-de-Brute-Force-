@@ -1,0 +1,13 @@
+Wordlists Utilizadas
+Para otimizar os testes e focar em eficiência, utilizei:
+
+Dicionário de Usuários: Lista customizada focada em contas de sistema (admin, root, msfadmin, user).
+
+Dicionário de Senhas: Lista baseada em Default Passwords e nas wordlists nativas do Kali Linux localizadas em /usr/share/wordlists/.
+paswords criadas (123456, password, msfadmin, admin, root)
+
+Comandos utilizados foram:
+echo -e "admin\nroot\nmsfadmin\nuser" > usuarios.txt
+echo -e "123456\npassword\nmsfadmin\nadmin\nroot" > senhas.txt
+
+Também pode ser criado manulamente pelo NANO.
